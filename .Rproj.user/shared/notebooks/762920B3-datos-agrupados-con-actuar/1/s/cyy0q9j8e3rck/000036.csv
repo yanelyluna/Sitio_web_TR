@@ -1,0 +1,8 @@
+"0","ggplot(data.frame(x=knots(Fn),y=Fn(knots(Fn))),aes(x=x,y=y)) +"
+"0","  geom_line(col='skyblue2',size=1.2) + "
+"0","  geom_point(col='slateblue',size=1.5) +"
+"0","  ylab(""Fn(x)"") +"
+"0","  ggtitle(""ogive"")+"
+"0","  theme_minimal() +"
+"0","  theme(plot.title = element_text(size=15, face=""bold"", "
+"0","    margin = margin(10, 0, 10, 0),family = ""mono""))"

@@ -1,0 +1,2 @@
+"0","library(knitr)"
+"0","kable(data.frame(Number_accidents=c(0:4,'5 o más'),Number_drivers=c(81714,11306,1618,250,40,7)),caption = 'Ejemplo de datos agrupados para la frecuencia de siniestros.',label=""Tabla 1."",align = 'c')"

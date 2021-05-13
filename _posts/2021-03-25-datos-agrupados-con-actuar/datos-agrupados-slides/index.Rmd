@@ -1,0 +1,310 @@
+---
+title: "Datos agrupados"
+subtitle: "actuar"
+author: "Yanely Luna Gutiérrez"
+institute: "Facultad de Ciencias, UNAM"
+date: "2021/03/23 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, tamu, tamu-fonts]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r, include = F}
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = F,echo = FALSE,fig.align = "center")
+library(flipbookr)
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+# ¿Qué son los datos agrupados?
+
+--
+
+Llamamos **datos agrupados** a aquellos que se presentan en forma de **frecuencia por intervalo**. Esto quiere decir que en vez de tener los valores exactos de las observaciones tenemos solo el intervalo al que pertenecen. Es común trabajar con este tipo de datos en análisis de supervivencia (con observaciones por intervalos de tiempo) pero también pueden presentarse en datos sobre severidad y frecuencia de reclamaciones de seguros. 
+
+---
+
+.pull-left[
+```{r frecuencia_agrup}
+library(knitr)
+kable(data.frame(Number_accidents=c(0:4,'5 o más'),Number_drivers=c(81714,11306,1618,250,40,7)),caption = 'Ejemplo de datos agrupados para la frecuencia de siniestros.',label="Tabla 1.",align = 'c')
+#knitr::include_graphics('frecuencia_agrup.PNG')
+```
+]
+
+--
+
+.pull-right[
+En el ejemplo de la [Tabla 1](#frecuencia_agrup), el número de conductores está agrupado por el número de accidentes que tuvieron en un año (250 conductores tuvieron 3 accidentes cada uno en un año). En este caso, no conocemos el número exacto de accidentes de los 7 conductores que pertenecen al último renglón, solo sabemos que tuvieron 5 o más accidentes.
+]
+
+---
+
+.pull-left[
+```{r severidad_agrup}
+kable(data.frame(Payment_range=c("0-7,500","7,500-17,500","17,500-32,500","32,500-67,500","67,500-125,000","125,000-300,000","Over 300,000"),Number_payments=c(99,42,29,28,17,9,3)),caption = 'Ejemplo de datos agrupados para la severidad.',label="Tabla 2.",align = 'c')
+#include_graphics('severidad_agrup.PNG')
+```
+]
+
+--
+
+.pull-right[
+En el ejemplo de la [Tabla 2](#severidad_agrup) no conocemos el monto exacto de cada reclamación pero sí el intervalo al que pertenecen (tenemos 17 reclamaciones cuyo monto es mayor a 67,500 y menor a 125,000).
+]
+---
+# Objeto `grouped.data` en `actuar`
+
+--
+
+```{r,echo=TRUE}
+#install.packages("actuar")
+library(actuar)
+```
+
+--
+
+La paquetería `actuar` provee funciones enfocadas en la modelación de variables de pérdida y otros temas relacionados que añaden funcionalidad en materia actuarial a `R`. Los principales temas que cubre esta paquetería son: modelación de variables de pérdida, teoría del riesgo (y de la ruina), simulación de modelos jerárquicos compuestos y teoría de la credibilidad.
+
+--
+
+En particular, esta paquetería provee una forma sencilla de almacenar, manipular y obtener estadísticas de datos agrupados. Dado que hay muchas formas de almacenar este tipo de datos, `actuar` cuenta con una forma estandarizada de hacerlo, creando objetos tipo `grouped.data` con la función homónima.
+
+---
+## Para crear un objeto `grouped.data`:
+
+--
+
++ La función `grouped.data` recibe el vector que contiene los extremos de los intervalos a crear (en el ejemplo llamamos `Grupo` a este vector, pero se le puede poner cualquier nombre válido).
+
+--
+
++ Después de pasar el vector para los intervalos, pasamos el o los vectores que representan la frecuencia, asignando al nombre que corresponda (cualquier nombre válido).
+
+--
+
+```{r groupedData, echo=TRUE}
+gd <- grouped.data(Grupo=c(0,25,50,100,150,250,500), 
+                   Frecuencia_1=c(30, 31, 57, 42, 45,10), 
+                   Frecuencia_2=c(81,40,33,12,7,26))
+gd
+```
+
+---
+
+ El objeto creado (`gd`) es a la vez un `data.frame` y un `grouped.data`, por lo que se pueden aplicar las funciones para extraer y sustituir columnas y renglones como a un `data.frame`. Es importante notar que la columna que representa los intervalos puede extraerse para ser manejada como un vector numérico, aunque dentro del objeto se considera como una columna de caracteres.
+
+--
+
+```{r group_char,echo=TRUE}
+#Columna tipo character
+gd$Grupo
+class(gd$Grupo)
+```
+
+--
+
+```{r group_num, echo=TRUE}
+#Vector numérico
+gd[,1]
+class(gd[,1])
+```
+
+---
+# Crear un histograma
+
+El objeto `grouped.data` cuenta con un método para crear un histograma respetando los intervalos proporcionados, por lo que solo tenemos que usar la función `hist()` y pasarle el objeto `grouped.data` con los datos de frecuencia que queremos graficar. 
+
+--
+
+```{r hist, echo=TRUE, fig.height=5}
+#Histograma de Frecuencia_1
+hist(gd[,-3],col="lightblue",main="Frecuencia_1",xlab="Grupos")
+```
+
+---
+
+# Ojiva
+
+Denotamos como $c_0 < c_1 <\cdots < c_k$ los puntos que definen los intervalos de nuestro datos agrupados (usualmente $c_0=0$ y $c_k=\infty$) y $n_j$ como el número de observaciones que pertenecen al intervalo $(c_{j-1},c_j]$ (con excepción del primer intervalo, el cual es $[c_0,c_1]$); donde $\sum_{j=1}^k n_j = n$ es el total de observaciones. 
+
+--
+
+Para datos agrupados podemos calcular la función de distribución empírica en los extemos de cada intervalo como el número de observaciones acumuladas hasta dicho extremo entre el total de observaciones, es decir $$F_n(c_j) = \frac{1}{n}\sum_{i=1}^j n_i$$
+
+--
+
+Una manera de aproximar la función de distribución de los datos agrupados es conectar mediante una línea recta los puntos de $F_n$ que obtuvimos en los extremos de los intervalos. La función de distribución que se obtiene con este método es llamada **ojiva** y queda definida como:
+$$F_n(x)=\frac{c_j-x}{c_j-c_{j-1}}F_n(c_{j-1})+\frac{x-c_{j-1}}{c_j-c_{j-1}}F_n(c_j)$$ 
+para $c_{j-1}\leq x \leq c_j$, $F_n(x)=0$ si $x<c_0$ y $F_n(x)=1$ si $x>c_k$.
+
+---
+
+`actuar` cuenta con la función `ogive()` para obtener dicha función de distribución.
+
+--
+
+
+```{r ogive, echo=TRUE}
+#Creamos Fn (una función)
+Fn <- ogive(gd)
+```
+
+--
+```{r ogive2, echo=TRUE}
+#Para obtener los extremos de los intervalos
+knots(Fn)
+```
+--
+```{r ogive3, echo=TRUE}
+#Valores de la ojiva en dichos extremos
+Fn(knots(Fn))
+```
+---
+```{r ogive4, echo=TRUE,fig.height=5.5}
+#Gráfica de la función
+plot(Fn)
+```
+
+Usando `ggplot2`:
+---
+`r chunk_reveal("ojiva")`
+
+```{r ojiva,include=FALSE}
+Fn_df <- data.frame(x=knots(Fn),y=Fn(knots(Fn))) 
+
+Fn_df %>%
+ggplot() +
+  aes(x=x,y=y) + 
+  geom_point(col='slateblue',size=2) +
+  geom_line(col='skyblue2',size=1.2) + 
+  ylab("Fn(x)") +
+  ggtitle("ogive")+
+  theme_minimal() +
+  theme(plot.title = element_text(size=15, face="bold", 
+    margin = margin(10, 0, 10, 0),family = "mono"))
+```
+
+---
+
+# Cálculo de momentos empíricos
+
+El paquete `actuar` tiene implementada la función `mean()` para datos agrupados, la cual calcula el primer momento empírico con la siguiente fórmula $$\frac{1}{n}\sum_{j=1}^r \left(\frac{c_{j-1}+c_j}{2}\right)n_j$$
+
+--
+
+```{r,echo=TRUE}
+#Cálculo de la media
+mean(gd)
+```
+
+---
+Para calcular momentos empíricos de mayor orden, `actuar` proporciona la función `emm()`, la cual calcula el k-ésimo momento empírico para datos agrupados siguiendo la fórmula:
+
+$$\sum_{j=1}^r \frac{n_j*(c_j^{k+1} - c_{j-1}^{k+1})}{n*(k+1)*(c_j - c_{j-1})}$$
+
+--
+
+```{r, echo=TRUE}
+#Cálculo de los primeros tres momentos empíricos
+emm(gd,order=1:3)
+```
+
+```{r}
+#corrección de la fórmula (el exponente debe ser k+1)
+#Ejemplo para k=3
+#c<-gd[,1]
+#n <- gd[,2]
+#c_d <- c[-1]
+#c <- c[-7]
+#sum(((c_d^4-c^4)/(4*215*(c_d-c)))*n)
+```
+
+---
+Además, `actuar` tiene implementada la función `elev()` (_empirical limited expected value_) para el cálculo del primer momento empírico limitado para cualquier límite $d>0$, es decir, calcula el valor observado de $$E(X\wedge d)$$.
+
+Similar a la función `ogive()`, con `elev()` creamos una función a la cual le pasamos el límite $d$ y calcula el valor esperado empírico con éste límite.
+
+--
+
+```{r lev, echo=TRUE}
+#Creamos la función lev
+lev <- elev(gd)
+```
+--
+```{r lev2, echo=TRUE}
+#Extremos de los intervalos
+knots(lev)
+```
+--
+```{r lev3, echo=TRUE}
+#Valor de la función en los extremos de los intervalos
+lev(knots(lev))
+
+```
+---
+```{r lev4, echo=TRUE,fig.height=5.5}
+#Al graficar la función, se grafican de manera determinada sus valores en los extremos de los intervalos
+plot(lev,pch=19)
+```
+
+Usando `ggplot2:`
+
+---
+
+`r chunk_reveal("elev")`
+
+```{r elev,include=FALSE}
+d <- seq(0,500,by=25)
+df <- data.frame(x=d,y=lev(d))
+
+df %>%                 
+ggplot() +
+  aes(x=x,y=y) + #BREAK
+  geom_point(color="green") + 
+  geom_line(color="lightgreen") +
+  ggtitle("Primer momento empírico limitado con límite d") +
+  xlab("d") + ylab("lev(d)") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=13, face="bold", 
+    margin = margin(10, 0, 10, 0),family = "mono"))
+
+```
+
+
+
+<!-- adjust font size in this css code chunk, currently 80 -->
+
+```{css, eval = TRUE, echo = FALSE}
+.remark-code{line-height: 1.5; font-size: 80%}
+
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+
+code.r.hljs.remark-code{
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+code.r.hljs.remark-code:hover{
+  overflow-x:visible;
+  width: 500px;
+  border-style: solid;
+}
+```
+

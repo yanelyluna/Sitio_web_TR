@@ -1,0 +1,6 @@
+---
+title: "Sobre este sitio"
+description: |
+  En este blog se encuentran publicados posts relacionados con diversos temas que se ven en el curso de Teoría del Riesgo en la carrera de Actuaría (Plan 2015) en la Facultad de Ciencias, UNAM.
+---
+

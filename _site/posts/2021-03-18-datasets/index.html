@@ -1,0 +1,3481 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Teoria del Riesgo: Datasets</title>
+
+<meta property="description" itemprop="description" content="Descripción de las bases de datos de  la biblioteca &quot;insuranceData&quot;."/>
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2021-03-18"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-03-18"/>
+<meta name="article:author" content="Yanely Luna Gutiérrez"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Teoria del Riesgo: Datasets"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Descripción de las bases de datos de  la biblioteca &quot;insuranceData&quot;."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Teoria del Riesgo"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Teoria del Riesgo: Datasets"/>
+<meta property="twitter:description" content="Descripción de las bases de datos de  la biblioteca &quot;insuranceData&quot;."/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Datasets"]},{"type":"character","attributes":{},"value":["Descripción de las bases de datos de  la biblioteca \"insuranceData\"."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Yanely Luna Gutiérrez"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["03-18-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["datasets","frecuencia","severidad"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["datasets-csv/AUTOBIsim.csv","datasets-csv/AutoClaims.csv","datasets-csv/AutoCollision.csv","datasets-csv/SingaporeAuto.csv","datasets-csv/SwedishMotorInsurance.csv","datasets-info-slides/datasets-csv/AUTOBIsim.csv","datasets-info-slides/datasets-csv/AutoClaims.csv","datasets-info-slides/datasets-csv/AutoCollision.csv","datasets-info-slides/datasets-csv/SingaporeAuto.csv","datasets-info-slides/datasets-csv/SwedishMotorInsurance.csv","datasets-info-slides/index.html","datasets-info-slides/index.Rmd","datasets-info-slides/index_files/figure-html/cars-1.svg","datasets-info-slides/libs/clipboard/clipboard.min.js","datasets-info-slides/libs/crosstalk/css/crosstalk.css","datasets-info-slides/libs/crosstalk/js/crosstalk.js","datasets-info-slides/libs/crosstalk/js/crosstalk.js.map","datasets-info-slides/libs/crosstalk/js/crosstalk.min.js","datasets-info-slides/libs/crosstalk/js/crosstalk.min.js.map","datasets-info-slides/libs/datatables-binding/datatables.js","datasets-info-slides/libs/datatables-css/datatables-crosstalk.css","datasets-info-slides/libs/dt-core/css/jquery.dataTables.extra.css","datasets-info-slides/libs/dt-core/css/jquery.dataTables.min.css","datasets-info-slides/libs/dt-core/js/jquery.dataTables.min.js","datasets-info-slides/libs/header-attrs/header-attrs.js","datasets-info-slides/libs/htmlwidgets/htmlwidgets.js","datasets-info-slides/libs/jquery/jquery-AUTHORS.txt","datasets-info-slides/libs/jquery/jquery.js","datasets-info-slides/libs/jquery/jquery.min.js","datasets-info-slides/libs/jquery/jquery.min.map","datasets-info-slides/libs/leaflet-binding/leaflet.js","datasets-info-slides/libs/leaflet/images/layers-2x.png","datasets-info-slides/libs/leaflet/images/layers.png","datasets-info-slides/libs/leaflet/images/marker-icon-2x.png","datasets-info-slides/libs/leaflet/images/marker-icon.png","datasets-info-slides/libs/leaflet/images/marker-shadow.png","datasets-info-slides/libs/leaflet/leaflet.css","datasets-info-slides/libs/leaflet/leaflet.js","datasets-info-slides/libs/leafletfix/leafletfix.css","datasets-info-slides/libs/proj4/proj4.min.js","datasets-info-slides/libs/Proj4Leaflet/proj4leaflet.js","datasets-info-slides/libs/remark-css/default.css","datasets-info-slides/libs/remark-css/tamu-fonts.css","datasets-info-slides/libs/remark-css/tamu.css","datasets-info-slides/libs/rstudio_leaflet/images/1px.png","datasets-info-slides/libs/rstudio_leaflet/rstudio_leaflet.css","datasets-info-slides/libs/shareon/shareon.min.css","datasets-info-slides/libs/shareon/shareon.min.js","datasets-info-slides/libs/tabwid/tabwid.css","datasets-info-slides/libs/xaringanExtra-shareagain/shareagain.css","datasets-info-slides/libs/xaringanExtra-shareagain/shareagain.js","datasets_files/anchor-4.2.2/anchor.min.js","datasets_files/bowser-1.9.3/bowser.min.js","datasets_files/clipboard-2.0.6/clipboard.min.js","datasets_files/crosstalk-1.1.1/css/crosstalk.css","datasets_files/crosstalk-1.1.1/js/crosstalk.js","datasets_files/crosstalk-1.1.1/js/crosstalk.js.map","datasets_files/crosstalk-1.1.1/js/crosstalk.min.js","datasets_files/crosstalk-1.1.1/js/crosstalk.min.js.map","datasets_files/datatables-binding-0.17/datatables.js","datasets_files/datatables-css-0.0.0/datatables-crosstalk.css","datasets_files/distill-2.2.21/template.v2.js","datasets_files/dt-core-1.10.20/css/jquery.dataTables.extra.css","datasets_files/dt-core-1.10.20/css/jquery.dataTables.min.css","datasets_files/dt-core-1.10.20/js/jquery.dataTables.min.js","datasets_files/fitvids-2.1.1/fitvids.min.js","datasets_files/header-attrs-2.7/header-attrs.js","datasets_files/htmlwidgets-1.5.3/htmlwidgets.js","datasets_files/jquery-3.5.1/jquery-AUTHORS.txt","datasets_files/jquery-3.5.1/jquery.js","datasets_files/jquery-3.5.1/jquery.min.js","datasets_files/jquery-3.5.1/jquery.min.map","datasets_files/popper-2.6.0/popper.min.js","datasets_files/shareon-1.4.1/shareon.min.css","datasets_files/shareon-1.4.1/shareon.min.js","datasets_files/tabwid-1.0.0/tabwid.css","datasets_files/tippy-6.2.7/tippy-bundle.umd.min.js","datasets_files/tippy-6.2.7/tippy-light-border.css","datasets_files/tippy-6.2.7/tippy.css","datasets_files/tippy-6.2.7/tippy.umd.min.js","datasets_files/webcomponents-2.0.0/webcomponents.js","datasets_files/xaringanExtra-shareagain-0.2.6/shareagain.css","datasets_files/xaringanExtra-shareagain-0.2.6/shareagain.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      50px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    sans-serif;
+  --mono-font:       monospace;
+  --body-font:       sans-serif;
+  --navbar-font:     sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+</style>
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default, #E9493B #a51229 
+   you may set its value to: unset
+   All rows must end with a semi-colon.    #D51100 #D1605D   9b111e   */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+@import url('https://fonts.googleapis.com/css2?family=Amiri');
+@import url('https://fonts.googleapis.com/css2?family=Bitter');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono');
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      50px;
+  --body-size:       1.08rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #D51100;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    "Amiri", serif;
+  --mono-font:       "DM Mono", monospace;
+  --body-font:       "Bitter", sans-serif;
+  --navbar-font:     "Amiri", serif; /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #E9493B;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      pink;
+  --bkgd-color:       #fedcd9;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+</style>
+<style type="text/css">
+/* base style */
+
+/* FONT FAMILIES */
+
+:root {
+  --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body,
+.posts-list .post-preview p,
+.posts-list .description p {
+  font-family: var(--body-font), var(--body-default);
+}
+
+h1, h2, h3, h4, h5, h6,
+.posts-list .post-preview h2,
+.posts-list .description h2 {
+  font-family: var(--heading-font), var(--heading-default);
+}
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: var(--mono-font), var(--mono-default);
+}
+
+
+/*-- TITLE --*/
+d-title h1,
+.posts-list > h1 {
+  color: var(--title-color, black);
+}
+
+d-title h1 {
+  font-size: var(--title-size, 50px);
+}
+
+/*-- HEADERS --*/
+d-article h1,
+d-article h2,
+d-article h3,
+d-article h4,
+d-article h5,
+d-article h6 {
+  color: var(--header-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- BODY --*/
+d-article > p,  /* only text inside of <p> tags */
+d-article > ul, /* lists */
+d-article > ol {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+  font-size: var(--body-size, 1.06rem);
+}
+
+
+/*-- CODE --*/
+d-article div.sourceCode code,
+d-article pre code {
+  font-size: var(--code-size, 14px);
+}
+
+/*-- ASIDE --*/
+d-article aside {
+  font-size: var(--aside-size, 12px);
+  color: var(--aside-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- FIGURE CAPTIONS --*/
+figure .caption,
+figure figcaption,
+.figure .caption {
+  font-size: var(--fig-cap-size, 13px);
+  color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- METADATA --*/
+d-byline h3 {
+  font-size: var(--heading-size, 0.6rem);
+  color: var(--heading-color, rgba(0, 0, 0, 0.5));
+}
+
+d-byline {
+  font-size: var(--body-size, 0.8rem);
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+d-byline a,
+d-article d-byline a {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- TABLE OF CONTENTS --*/
+.d-contents nav h3 {
+  font-size: var(--heading-size, 18px);
+}
+
+.d-contents nav a {
+  font-size: var(--contents-size, 13px);
+}
+
+/*-- APPENDIX --*/
+d-appendix h3 {
+  font-size: var(--heading-size, 15px);
+  color: var(--heading-color, rgba(0, 0, 0, 0.65));
+}
+
+d-appendix {
+  font-size: var(--text-size, 0.8em);
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+d-appendix d-footnote-list a.footnote-backlink {
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+.distill-site-header .title {
+  font-size: var(--title-size, 18px);
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.distill-site-header a,
+.nav-dropdown .nav-dropbtn {
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  font-size: var(--text-size, 15px);
+}
+
+.distill-site-header a:hover,
+.nav-dropdown:hover .nav-dropbtn {
+  color: var(--hover-color, white);
+}
+
+.distill-site-header {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer a:hover {
+  color: var(--hover-color, white);
+}</style>
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="../../site_libs/clipboard-2.0.6/clipboard.min.js"></script>
+  <link href="../../site_libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+  <script src="../../site_libs/shareon-1.4.1/shareon.min.js"></script>
+  <link href="../../site_libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+  <script src="../../site_libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+  <script src="../../site_libs/fitvids-2.1.1/fitvids.min.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="../../site_libs/datatables-binding-0.17/datatables.js"></script>
+  <link href="../../site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="../../site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="../../site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="../../site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Datasets","description":"Descripción de las bases de datos de  la biblioteca \"insuranceData\".","authors":[{"author":"Yanely Luna Gutiérrez","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-18T00:00:00.000-06:00","citationText":"Gutiérrez, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Teoria del Riesgo</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Home</a>
+<a href="../../about.html">About</a>
+<a href="https://github.com/EduardoSelimMM/MaterialTeoriaRiesgo">
+<i class="fa fa-github" aria-hidden="true"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Datasets</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:datasets" class="dt-tag">datasets</a>
+  <a href="../../index.html#category:frecuencia" class="dt-tag">frecuencia</a>
+  <a href="../../index.html#category:severidad" class="dt-tag">severidad</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Descripción de las bases de datos de la biblioteca “insuranceData”.</p></p>
+</div>
+
+<div class="d-byline">
+  Yanely Luna Gutiérrez true 
+  
+<br/>03-18-2021
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#package-insurancedata">Package “insuranceData”</a>
+<ul>
+<li><a href="#autobi-automobile-bodily-injury-claims"><code>AutoBi</code>: Automobile Bodily Injury Claims</a></li>
+<li><a href="#autoclaims-automobile-insurance-claims"><code>AutoClaims</code>: Automobile Insurance Claims</a></li>
+<li><a href="#autocollision-automobile-uk-collision-claims"><code>AutoCollision</code>: Automobile UK Collision Claims</a></li>
+<li><a href="#claimslong-claims-longitudinal"><code>ClaimsLong</code>: Claims Longitudinal</a></li>
+<li><a href="#datacar-data-car"><code>dataCar</code>: data Car</a></li>
+<li><a href="#dataohlsson-motorcycle-insurance"><code>dataOhlsson</code>: Motorcycle Insurance</a></li>
+<li><a href="#industryauto-auto-industry"><code>IndustryAuto</code>: Auto Industry</a></li>
+<li><a href="#singaporeauto-singapore-automobile-claims"><code>SingaporeAuto</code>: Singapore Automobile Claims</a></li>
+<li><a href="#thirdparty-third-party-insurance"><code>Thirdparty</code>: Third party insurance</a></li>
+<li><a href="#workerscomp-workers-compensation"><code>WorkersComp</code>: Workers Compensation</a></li>
+<li><a href="#datasets-del-libro-regression-modeling-with-actuarial-and-financial-applications">Datasets del libro <em>Regression Modeling with Actuarial and Financial Applications</em></a>
+<ul>
+<li><a href="#autobi-automobile-bodily-injury-claims-1"><code>AutoBi</code>: Automobile Bodily Injury Claims</a></li>
+<li><a href="#autobisim-automobile-bodily-injury-claims-simulated"><code>AutoBIsim</code>: Automobile Bodily Injury Claims Simulated</a></li>
+<li><a href="#autocollision-automobile-uk-collision-claims-1"><code>AutoCollision</code>: Automobile UK Collision Claims</a></li>
+<li><a href="#autoclaims-automobile-insurance-claims-1"><code>AutoClaims</code>: Automobile Insurance Claims</a></li>
+<li><a href="#singaporeauto-singapore-automobile-claims-1"><code>SingaporeAuto</code>: Singapore Automobile Claims</a></li>
+<li><a href="#swedish-motor-insurance">Swedish Motor Insurance</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="datasets-info-slides\index.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+<div style="text-align: center">
+<h1 id="package-insurancedata">Package “insuranceData”</h1>
+<div/>
+
+<div style="text-align: justify">
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#install.packages("insuranceData")</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>insuranceData</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="autobi-automobile-bodily-injury-claims"><code>AutoBi</code>: Automobile Bodily Injury Claims</h2>
+<p>Contiene información de 1340 reclamaciones en 8 variables relacionadas con características demográficas del reclamante, participación legal y la pérdida económica, entre otras. Los datos fueron recolectados en 2002 por la <em>Insurance Reaserch Council</em> (IRC) y pertenecen a un mismo estado de EE.UU. Todas las variables están registradas como numéricas.</p>
+<p><strong>Variables</strong>:</p>
+<ul>
+<li><p><code>CASENUM</code>: Número de caso para identificar la reclamación.</p></li>
+<li><p><code>ATTORNEY</code>: Indica si el reclamante está representado por un abogado.</p>
+<ul>
+<li>1: Sí</li>
+<li>2: No</li>
+</ul></li>
+<li><p><code>CLMSEX</code>: Género del reclamante. Contiene 12 valores nulos.</p>
+<ul>
+<li>1: Hombre</li>
+<li>2: Mujer</li>
+</ul></li>
+<li><p><code>MARITAL</code>: Estado civil del reclamante. Contiene 16 valores nulos.</p>
+<ul>
+<li>1: Casado</li>
+<li>2: Soltero</li>
+<li>3: Viudo</li>
+<li>4: Divorciado</li>
+</ul></li>
+<li><p><code>CLMINSUR</code>: Indica si el vehículo del reclamante se encontraba o no asegurado.</p>
+<ul>
+<li>1: Sí</li>
+<li>2: No</li>
+<li>3: No aplicable</li>
+</ul></li>
+<li><p><code>SEATBELT</code>: Indica si el reclamante estaba usando el cinturón de seguridad.</p>
+<ul>
+<li>1: Sí</li>
+<li>2: No</li>
+<li>3: No aplicable</li>
+</ul></li>
+<li><p><code>CLMAGE</code>: Edad del reclamante. Contiene 189 valores nulos.</p></li>
+<li><p><code>LOSS</code>: El monto total de la pérdida económica del reclamante (en miles de dólares).</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-8e85644e3fc31d13b936" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8e85644e3fc31d13b936">{"x":{"filter":"none","data":[[5,13,66,71,96,97,120,136,152,155],[1,2,2,1,2,1,1,1,2,2],[1,2,1,1,1,2,1,2,2,1],[null,2,2,1,4,1,2,2,2,2],[2,1,2,2,2,2,2,2,2,2],[1,1,1,2,1,1,1,1,1,1],[50,28,5,32,30,35,19,34,61,null],[34.94,10.892,0.33,11.037,0.138,0.309,3.538,4.882,0.874,1.351]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>CASENUM<\/th>\n      <th>ATTORNEY<\/th>\n      <th>CLMSEX<\/th>\n      <th>MARITAL<\/th>\n      <th>CLMINSUR<\/th>\n      <th>SEATBELT<\/th>\n      <th>CLMAGE<\/th>\n      <th>LOSS<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4,5,6,7]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="autoclaims-automobile-insurance-claims"><code>AutoClaims</code>: Automobile Insurance Claims</h2>
+<p>Esta base de datos contiene información sobre la experiencia de una aseguradora del oeste de EE.UU. en reclamaciones de seguros de automóviles de pasageros privados. La aseguradora utiliza un sistema de clasificación de riesgo para las pólizas basado en las características de la persona que opera el vehículo y las características propias del vehículo. La base está conformada por 6773 observaciones de 5 variables.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>STATE</code>: Variable categórica con códigos del 01 al 17 que se asigna aleatoriamente para representar un estado.</p></li>
+<li><p><code>CLASS</code>: Representa la calificación del operador del vehículo. Toma en cuenta variables como la edad, género, estado civil y uso del vehículo. Está registrada como una variable categórica con los siguientes niveles: <code>C1</code>,<code>C11</code>, <code>C1A</code>, <code>C1B</code>, <code>C1C</code>, <code>C2</code>, <code>C6</code>, <code>C7</code>, <code>C71</code>, <code>C72</code>, <code>C7A</code>, <code>C7B</code>, <code>C7C</code>, <code>F1</code>, <code>F11</code>, <code>F6</code>, <code>F7</code>, <code>F71</code>.</p></li>
+<li><p><code>GENDER</code>: Indica el género del operador. Está registrada como una variable categórica con los siguientes niveles:</p>
+<ul>
+<li>F: Mujer</li>
+<li>M: Hombre</li>
+</ul></li>
+<li><p><code>AGE</code>: Edad del operador.</p></li>
+<li><p><code>PAID</code>: Monto de la reclamación que se pagó (en dólares).</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">STATE</th>
+<th style="text-align: center;">CLASS</th>
+<th style="text-align: center;">GENDER</th>
+<th style="text-align: center;">AGE</th>
+<th style="text-align: center;">PAID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">STATE 14</td>
+<td style="text-align: center;">C6</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">1134.44</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">STATE 15</td>
+<td style="text-align: center;">C6</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">3761.24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">STATE 15</td>
+<td style="text-align: center;">C11</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">7842.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">STATE 15</td>
+<td style="text-align: center;">F6</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">2384.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">STATE 15</td>
+<td style="text-align: center;">F6</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">650.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">STATE 15</td>
+<td style="text-align: center;">F6</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">391.12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div/>
+
+<div style="text-align: justify">
+<h2 id="autocollision-automobile-uk-collision-claims"><code>AutoCollision</code>: Automobile UK Collision Claims</h2>
+<p>La base de datos original contiene 8942 pérdidas por colisiones en seguros de automóviles de pasajeros privados del Reino Unido. Esta base está conformada por 32 observaciones: 8 tipos de conductores (por grupo de edad) y 4 tipos de vehículos.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>Age</code>: Edad del conductor. Está registrada como una variable categórica con los niveles <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, <code>F</code>, <code>G</code>, <code>H</code>, <code>I</code>.</p></li>
+<li><p><code>vehicle_Use</code>: Indica el propósito del uso del vehículo. Es una variable categórica con los siguientes niveles:</p>
+<ul>
+<li><code>Business</code>:</li>
+<li><code>DriveLong</code>: Para conducir al trabajo (más de 10 millas).</li>
+<li><code>DriveShort</code>: Para conducir al trabajo (menos de 10 millas).</li>
+<li><code>Pleasure</code>:</li>
+</ul></li>
+<li><p><code>Severity</code>: Monto promedio de reclamación (en libras esterlinas ajustado por inflación).</p></li>
+<li><p><code>Claim_Count</code>: Número de reclamaciones.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Age</th>
+<th style="text-align: center;">Vehicle_Use</th>
+<th style="text-align: center;">Severity</th>
+<th style="text-align: center;">Claim_Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">Pleasure</td>
+<td style="text-align: center;">250.48</td>
+<td style="text-align: center;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">DriveShort</td>
+<td style="text-align: center;">274.78</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">DriveLong</td>
+<td style="text-align: center;">244.52</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">Business</td>
+<td style="text-align: center;">797.80</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">Pleasure</td>
+<td style="text-align: center;">213.71</td>
+<td style="text-align: center;">63</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">DriveShort</td>
+<td style="text-align: center;">298.60</td>
+<td style="text-align: center;">171</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div/>
+
+<div style="text-align: justify">
+<h2 id="claimslong-claims-longitudinal"><code>ClaimsLong</code>: Claims Longitudinal</h2>
+<p>Contiene datos simulados basados en una base de datos de seguros de autos. Se tienen 40000 pólizas por 3 años, resultando en 120000 registros.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>policyID</code>: Número de póliza.</p></li>
+<li><p><code>agecat</code>: Variable categórica con 5 niveles que representa la edad a la que pertenece la edad del conductor, siendo 1 el grupo de edad más jóven.</p></li>
+<li><p><code>valuecat</code>: Variable categórica con 6 niveles que representa el valor del vehículo. (La categoría 1 fue registrada como 9.)</p></li>
+<li><p><code>period</code>: Año de observación. Está registrada como variable numérica con valores 1,2,3.</p></li>
+<li><p><code>numclaims</code>: Número de reclamaciones.</p></li>
+<li><p><code>claim</code>: Indica si hubo o no reclamación. Contiene los valores0 y 1.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">policyID</th>
+<th style="text-align: center;">agecat</th>
+<th style="text-align: center;">valuecat</th>
+<th style="text-align: center;">period</th>
+<th style="text-align: center;">numclaims</th>
+<th style="text-align: center;">claim</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="datacar-data-car"><code>dataCar</code>: data Car</h2>
+<p>La base de datos contiene información de pólizas de seguro de autos con vigencia de un año. Se tienen información de 67856 pólizas.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>veh_value</code>: Valor del vehículo en unidades de 10 mil dólares.</p></li>
+<li><p><code>exposure</code>: Exposición de la póliza. Valor entre 0 y 1.</p></li>
+<li><p><code>clm</code>: Indica si ocurrió o no una reclamación.</p>
+<ul>
+<li>0: No</li>
+<li>1: Sí</li>
+</ul></li>
+<li><p><code>numclaims</code>: Número de reclamaciones de la póliza.</p></li>
+<li><p><code>claimcst0</code>: Monto de la reclamación.</p></li>
+<li><p><code>veh_body</code>: Indica el tipo de vehículo. Es una variable categórica con los siguientes 13 niveles: <code>BUS</code>, <code>CONVT</code>, <code>COUPE</code>, <code>HBACK</code>, <code>HDTOOP</code>, <code>MCARA</code>, <code>MIBUS</code>, <code>PANVN</code>, <code>RDSTR</code>, <code>SEDAN</code>, <code>STNWG</code>, <code>TRUCK</code>, <code>UTE</code>.</p></li>
+<li><p><code>veh_age</code>: Antigüedad del vehículo. Puede tomar los valores 1,2,3 o 4, siendo 1 el grupo de menor antigüedad.</p></li>
+<li><p><code>gender</code>: Género del conductor.</p>
+<ul>
+<li>F: Mujer</li>
+<li>M: Hombre</li>
+</ul></li>
+<li><p><code>area</code>: Área de residencia del conductor. Es una variable categórica con los niveles <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, <code>F</code>.</p></li>
+<li><p><code>agecat</code>: Categoría a la que pertenece la edad del conductor. Los niveles van del 1 al 6, siendo 1 el nivel de menor edad.</p></li>
+<li><p><code>X_OBSTAT_</code>: Variable factor con un único nivel 01101 0 0 0.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 4%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">veh_value</th>
+<th style="text-align: center;">exposure</th>
+<th style="text-align: center;">clm</th>
+<th style="text-align: center;">numclaims</th>
+<th style="text-align: center;">claimcst0</th>
+<th style="text-align: center;">veh_body</th>
+<th style="text-align: center;">veh_age</th>
+<th style="text-align: center;">gender</th>
+<th style="text-align: center;">area</th>
+<th style="text-align: center;">agecat</th>
+<th style="text-align: center;">X_OBSTAT_</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.06</td>
+<td style="text-align: center;">0.3039014</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">HBACK</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.03</td>
+<td style="text-align: center;">0.6488706</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">HBACK</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3.26</td>
+<td style="text-align: center;">0.5694730</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">UTE</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4.14</td>
+<td style="text-align: center;">0.3175907</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">STNWG</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.72</td>
+<td style="text-align: center;">0.6488706</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">HBACK</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2.01</td>
+<td style="text-align: center;">0.8542094</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">HDTOP</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">01101 0 0 0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="dataohlsson-motorcycle-insurance"><code>dataOhlsson</code>: Motorcycle Insurance</h2>
+<p>Los datos provienen de un estudio realizado por una aseguradora suiza (Wasa) que involucra seguros de “casco parcial” para motocicletas. Contiene información agregada de todas las pólizas y reclamaciones entre 1994 y 1998. Se tienen 64548 observaciones en 9 variables.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>agarald</code>: Edad del propietario en años.</p></li>
+<li><p><code>kon</code>: Género del propietario.</p>
+<ul>
+<li>K: Mujer</li>
+<li>M: Hombre</li>
+</ul></li>
+<li><p><code>zon</code>: Zona geográfica. Toma los valores enteros del 1 al 7.</p></li>
+<li><p><code>mcklass</code>: Clasificación basada en el <em>EV ratio</em> calculado como: <span class="math display">\[EV = \frac{\text{Potencia del motor en KW}\times100}{\text{Peso del vehículo en kg + 75} }\]</span> y redondeado al menor entero más cercano. Los valores de <em>EV ratio</em> están divididos en 7 clases.</p></li>
+<li><p><code>fordald</code>: Antigüedad del vehículo en años.</p></li>
+<li><p><code>bonuski</code>: <em>Bonus class</em>. Toma valores enteros entre 1 y 7. Un conductor nuevo comienza con 1 punto y por cada año en el que no tenga reclamaciones se incrementa 1 punto. Al ocurrir la primera reclamación se restan 2 puntos. El conductor no puede regresar a la clase 7 (la más alta) a menos que hayan pasado 6 años consecutivos sin reclamación.</p></li>
+<li><p><code>duration</code>: Años de vigencia de la póliza.</p></li>
+<li><p><code>antskad</code>: Número de reclamaciones.</p></li>
+<li><p><code>skadkost</code>: Monto de la reclamación.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">agarald</th>
+<th style="text-align: center;">kon</th>
+<th style="text-align: center;">zon</th>
+<th style="text-align: center;">mcklass</th>
+<th style="text-align: center;">fordald</th>
+<th style="text-align: center;">bonuskl</th>
+<th style="text-align: center;">duration</th>
+<th style="text-align: center;">antskad</th>
+<th style="text-align: center;">skadkost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.175342</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.000000</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.454795</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.172603</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.180822</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.542466</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="industryauto-auto-industry"><code>IndustryAuto</code>: Auto Industry</h2>
+<p>Contiene la información agregada de la industria en las coberturas de responsabilidad y gastos médicos en autos, correspondientes al año 2004 en millones de dólares. Se tienen 55 observaciones sobre 3 variables.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>Incurral.Year</code>: Año en el que se realizó la reclamación.</p></li>
+<li><p><code>Development.Year</code>: Número de años que transcurrieron entre la ocurrencia de la reclamación y el momento en que se hizo el pago de la misma.</p></li>
+<li><p><code>Claim</code>: Monto agregado de los pagos netos (en millones de dólares).</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Incurral.Year</th>
+<th style="text-align: center;">Development.Year</th>
+<th style="text-align: center;">Claim</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1995</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">17674</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1996</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">18315</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">18606</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1998</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">18816</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">20649</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2000</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">22327</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="singaporeauto-singapore-automobile-claims"><code>SingaporeAuto</code>: Singapore Automobile Claims</h2>
+<p>Esta base de datos proviene de la <em>General Insurance Association of Singapore</em>. Se compone de 7483 observaciones sobre 15 variables relacionadas con siniestros en automóviles.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>SexInsured</code>: Variable categórica que indica el sexo del conductor del vehículo.</p>
+<ul>
+<li>F: Mujer</li>
+<li>M: Hombre</li>
+<li>U: No especificado.</li>
+</ul></li>
+<li><p><code>Female</code>: Indica si el conductor del vehículo es de sexo femenino. Es consistente con la información de la variable <code>SexInsured</code>.</p></li>
+<li><p><code>VehicleType</code>: Tipo del vehículo. Es una variable categórica con niveles <code>A</code>, <code>G</code>, <code>M</code>, <code>P</code>, <code>Q</code>, <code>S</code>, <code>T</code>, <code>W</code>, <code>Z</code>.</p></li>
+<li><p><code>PC</code>: Indica si se trata de un vehículo privado o no.</p>
+<ul>
+<li>1: Sí</li>
+<li>2: No</li>
+</ul></li>
+<li><p><code>Clm_Count</code>: Número de reclamaciones durante el año.</p></li>
+<li><p><code>Exp_weights</code>: Exposición o fracción del año durante la cual la póliza estuvo en efecto.</p></li>
+<li><p><code>LNWEIGHT</code>: Logaritmo natural de <code>Exp_weights</code></p></li>
+<li><p><code>NCD</code>: <em>No claims discount</em>. Descuento por no reclamaciones. Basado en el previo registro de accidentes del conductor. El descuento es mayor cuando el registro previo es mejor.</p></li>
+<li><p><code>AgeCat</code>: Edad del conductor agrupada en siete categorías:</p>
+<ul>
+<li>0: Menor o igual a 21 años.</li>
+<li>1: Entre 22 y 25 años, inclusivo.</li>
+<li>2: Entre 26 y 35 años, inclusivo.</li>
+<li>3: Entre 36 y 45 años, inclusivo.</li>
+<li>4: Entre 46 y 55 años, inclusivo.</li>
+<li>5: Entre 56 y 65 años, inclusivo.</li>
+<li>6: Mayor o igual a 66 años.</li>
+</ul></li>
+<li><p><code>AutoAgeO</code>:</p>
+<ul>
+<li>1 Si se trata de un auto privado y <code>VAgeCat = 0</code>.</li>
+<li>0 En otro caso</li>
+</ul></li>
+<li><p><code>AutoAge1</code>:</p>
+<ul>
+<li>1 Si se trata de un auto privado y <code>VAgeCat = 1</code>.</li>
+<li>0 En otro caso</li>
+</ul></li>
+<li><p><code>AutoAge2</code>:</p>
+<ul>
+<li>1 Si se trata de un auto privado y <code>VAgeCat = 2</code>.</li>
+<li>0 En otro caso</li>
+</ul></li>
+<li><p><code>AutoAge</code>:</p>
+<ul>
+<li>1 Si se trata de un auto privado y <code>VAgeCat</code> es 0, 1 o 2.</li>
+<li>0 En otro caso</li>
+</ul></li>
+<li><p><code>VAgeCat</code>: Antigüedad del vehículo agrupada en siete categorías.</p>
+<ul>
+<li>0: Menor a un año.</li>
+<li>1: 1 año.</li>
+<li>2: 2 años.</li>
+<li>3: Entre 3 y 5 años.</li>
+<li>4: Entre 6 y 10 años.</li>
+<li>5: Entre 11 y 15 años.</li>
+<li>6: Mayor o igual a 16 años.</li>
+</ul></li>
+<li><p><code>VAgecat1</code>: Representa los mismos grupos que <code>VAgeCat</code> pero con las categorías 0,1 y 2 agrupadas en la categoría 2.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<template id="c3750e16-72ec-4063-a0ea-6ab8a490f6af"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-5ae0ec66{border-collapse:collapse;}.cl-5abbfe42{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5abbfe43{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5abbfe44{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5abd36fe{width:68.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd36ff{width:82.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3700{width:75.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3701{width:76.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3702{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3703{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3704{width:82.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3705{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3706{width:64.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3707{width:44.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abd3708{width:81.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ede{width:35.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6edf{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee0{width:81.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee1{width:82.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee2{width:76.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee3{width:82.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee4{width:75.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee5{width:44.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee6{width:64.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee7{width:68.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abe6ee8{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa72c{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa72d{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa72e{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa72f{width:35.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa730{width:64.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa731{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa732{width:68.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa733{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa734{width:35.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa735{width:44.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5abfa736{width:82.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df3e{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df3f{width:75.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df40{width:76.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df41{width:81.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df42{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df43{width:82.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df44{width:68.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df45{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df46{width:76.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df47{width:81.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac0df48{width:82.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac21796{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac21797{width:82.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac21798{width:75.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac21799{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac2179a{width:35.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac2179b{width:57.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac2179c{width:44.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5ac2179d{width:64.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-5ae0ec66'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-5ac0df46"><p class="cl-5abbfe43"><span class="cl-5abbfe42">SexInsured</span></p></td><td class="cl-5ac2179b"><p class="cl-5abbfe44"><span class="cl-5abbfe42">Female</span></p></td><td class="cl-5ac0df47"><p class="cl-5abbfe43"><span class="cl-5abbfe42">VehicleType</span></p></td><td class="cl-5ac2179a"><p class="cl-5abbfe44"><span class="cl-5abbfe42">PC</span></p></td><td class="cl-5ac21798"><p class="cl-5abbfe44"><span class="cl-5abbfe42">Clm_Count</span></p></td><td class="cl-5ac0df48"><p class="cl-5abbfe44"><span class="cl-5abbfe42">Exp_weights</span></p></td><td class="cl-5ac21797"><p class="cl-5abbfe44"><span class="cl-5abbfe42">LNWEIGHT</span></p></td><td class="cl-5ac2179c"><p class="cl-5abbfe44"><span class="cl-5abbfe42">NCD</span></p></td><td class="cl-5ac21799"><p class="cl-5abbfe44"><span class="cl-5abbfe42">AgeCat</span></p></td><td class="cl-5ac0df44"><p class="cl-5abbfe44"><span class="cl-5abbfe42">AutoAge0</span></p></td><td class="cl-5ac0df44"><p class="cl-5abbfe44"><span class="cl-5abbfe42">AutoAge1</span></p></td><td class="cl-5ac0df44"><p class="cl-5abbfe44"><span class="cl-5abbfe42">AutoAge2</span></p></td><td class="cl-5ac0df45"><p class="cl-5abbfe44"><span class="cl-5abbfe42">AutoAge</span></p></td><td class="cl-5ac2179d"><p class="cl-5abbfe44"><span class="cl-5abbfe42">VAgeCat</span></p></td><td class="cl-5ac21796"><p class="cl-5abbfe44"><span class="cl-5abbfe42">VAgecat1</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-5abd3701"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abe6edf"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3708"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abe6ede"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3700"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3704"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.6680356</span></p></td><td class="cl-5abd36ff"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.40341383</span></p></td><td class="cl-5abd3707"><p class="cl-5abbfe44"><span class="cl-5abbfe42">30</span></p></td><td class="cl-5abd3705"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3703"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3706"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3702"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5abd3701"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abe6edf"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3708"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abe6ede"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3700"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3704"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.5667351</span></p></td><td class="cl-5abd36ff"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.56786326</span></p></td><td class="cl-5abd3707"><p class="cl-5abbfe44"><span class="cl-5abbfe42">30</span></p></td><td class="cl-5abd3705"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3703"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3706"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3702"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5abd3701"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abe6edf"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3708"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abe6ede"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3700"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3704"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.5037645</span></p></td><td class="cl-5abd36ff"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.68564629</span></p></td><td class="cl-5abd3707"><p class="cl-5abbfe44"><span class="cl-5abbfe42">30</span></p></td><td class="cl-5abd3705"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3703"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3706"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3702"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5abe6ee2"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abfa72d"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee0"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abfa72f"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee4"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee1"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.9144422</span></p></td><td class="cl-5abe6ee3"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.08944106</span></p></td><td class="cl-5abe6ee5"><p class="cl-5abbfe44"><span class="cl-5abbfe42">20</span></p></td><td class="cl-5abfa72e"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee7"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee7"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee7"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa72c"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee6"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abe6ee8"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5abd3701"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abe6edf"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3708"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abe6ede"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3700"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3704"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.5366188</span></p></td><td class="cl-5abd36ff"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.62246739</span></p></td><td class="cl-5abd3707"><p class="cl-5abbfe44"><span class="cl-5abbfe42">20</span></p></td><td class="cl-5abd3705"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd36fe"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3703"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3706"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abd3702"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5ac0df40"><p class="cl-5abbfe43"><span class="cl-5abbfe42">U</span></p></td><td class="cl-5abfa733"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5ac0df41"><p class="cl-5abbfe43"><span class="cl-5abbfe42">T</span></p></td><td class="cl-5abfa734"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5ac0df3f"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5ac0df43"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0.7529090</span></p></td><td class="cl-5abfa736"><p class="cl-5abbfe44"><span class="cl-5abbfe42">-0.28381095</span></p></td><td class="cl-5abfa735"><p class="cl-5abbfe44"><span class="cl-5abbfe42">20</span></p></td><td class="cl-5ac0df3e"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa732"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa732"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa732"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa731"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5abfa730"><p class="cl-5abbfe44"><span class="cl-5abbfe42">0</span></p></td><td class="cl-5ac0df42"><p class="cl-5abbfe44"><span class="cl-5abbfe42">2</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="537f521c-b482-49f7-84bc-4284e895d5c9"></div>
+<script>
+var dest = document.getElementById("537f521c-b482-49f7-84bc-4284e895d5c9");
+var template = document.getElementById("c3750e16-72ec-4063-a0ea-6ab8a490f6af");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+</div>
+<h2 id="thirdparty-third-party-insurance"><code>Thirdparty</code>: Third party insurance</h2>
+<p>El seguro <em>third party</em> (a terceros) es un seguro obligatorio para conductores de automóviles en Australia. Este conjunto de datos contiene el registro del número de reclamaciones hechas de este tipo de seguro durante doce meses entre 1984 y 1986 en cada una de las 176 zonas geográficas de New South Wales, Australia.</p>
+<p><strong>Variables:</strong></p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">lga.sd.claims.accidents.ki.population.pop_density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ASHFIELD;1;1103;2304;920;124850;0</td>
+<td style="text-align: center;">499001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AUBURN;1;1939;2660;1465;143500;0</td>
+<td style="text-align: center;">148379</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BANKSTOWN;1;4339;7381;3864;470700;0</td>
+<td style="text-align: center;">205407</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BAULKHAMHILLS;1;1491;3217;1554;311300;0</td>
+<td style="text-align: center;">25879</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BLACKTOWN;1;3801;6655;4175;584900;0</td>
+<td style="text-align: center;">81222</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BOTANY;1;387;2013;854;106350;0</td>
+<td style="text-align: center;">178143</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La base de datos contiene 176 registros en una columna con nombre <code>lga.sd.claims.accidents.ki.population.pop_density</code> que contiene valores enteros (correspondiente a la población de cada área geográfica). Sin embargo, el nombre de cada renglón contiene el resto de la información de las otras variables. Por ejemplo, el nombre del primer renglón es ASHFIELD;1;1103;2304;920;124850;0, en el cual se encuentran las observaciones de las demás variables separadas por un punto y coma.</p>
+<ul>
+<li><p><code>lga</code>: <em>local government areas</em>. Nombre del área geográfica.</p></li>
+<li><p><code>sd</code>: <em>statistical divisions</em>. Indica el número de la división estadística a la que pertenece cada área. Exisiten 13 divisiones.</p></li>
+<li><p><code>claims</code>: Número de reclamaciones realizadas.</p></li>
+<li><p><code>accidents</code>: Número de accidentes reportados.</p></li>
+<li><p><code>ki</code>: Número de personas que murieron o resultaron heridas.</p></li>
+<li><p><code>population</code>: Población total.</p></li>
+<li><p><code>pop_density</code>:</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>  population           lga sd claims accidents   ki pop_density
+1     499001      ASHFIELD  1   1103      2304  920      124850
+2     148379        AUBURN  1   1939      2660 1465      143500
+3     205407     BANKSTOWN  1   4339      7381 3864      470700
+4      25879 BAULKHAMHILLS  1   1491      3217 1554      311300
+5      81222     BLACKTOWN  1   3801      6655 4175      584900
+6     178143        BOTANY  1    387      2013  854      106350</code></pre>
+</div>
+<h2 id="workerscomp-workers-compensation"><code>WorkersComp</code>: Workers Compensation</h2>
+<p>Contiene información sobre las reclamaciones por incapacidad parcial permanente en el seguro de compensación a trabajadores. Los datos provienen originalmente de la <em>National Council on Compensation Insurance</em>. Con la finalidad de mantener la confidencialidad, la información detallada sobre las clases de ocupación de los trabajadores y los años observados no se encuentra disponible. Se tienen 847 observaciones sobre 4 variables.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>CL</code>: Identificador de la clase de trabajador.</p></li>
+<li><p><code>YR</code>: Identificador del año.</p></li>
+<li><p><code>PR</code>: Nómina (como medida de exposición a las pérdidas) expresada en unidades de 10 millones de dólares.</p></li>
+<li><p><code>LOSS</code>: Pérdidas por compensaciones por incapacidad parcial permanente, expresadas en unidades de 10 millones de dólares.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">CL</th>
+<th style="text-align: center;">YR</th>
+<th style="text-align: center;">PR</th>
+<th style="text-align: center;">LOSS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">21798086</td>
+<td style="text-align: center;">538707</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">22640528</td>
+<td style="text-align: center;">439184</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">22572010</td>
+<td style="text-align: center;">1059775</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24789710</td>
+<td style="text-align: center;">560013</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">25876764</td>
+<td style="text-align: center;">1004997</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">28033613</td>
+<td style="text-align: center;">1097314</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="datasets-del-libro-regression-modeling-with-actuarial-and-financial-applications">Datasets del libro <em>Regression Modeling with Actuarial and Financial Applications</em></h2>
+<h3 id="autobi-automobile-bodily-injury-claims-1"><code>AutoBi</code>: Automobile Bodily Injury Claims</h3>
+<p>No disponible.</p>
+<h3 id="autobisim-automobile-bodily-injury-claims-simulated"><code>AutoBIsim</code>: Automobile Bodily Injury Claims Simulated</h3>
+<p>Contiene 1340 observaciones de 8 variables cuyos nombres son los mismos que los de la base <code>AutoBi</code> que se describió anteriormente y que también tiene 1340 observaciones. A diferencia de <code>AutoBi</code>, <code>AutoBIsim</code> no contiene valores nulos.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">X</th>
+<th style="text-align: center;">ATTORNEY</th>
+<th style="text-align: center;">CLMSEX</th>
+<th style="text-align: center;">MARITAL</th>
+<th style="text-align: center;">CLMINSUR</th>
+<th style="text-align: center;">SEATBELT</th>
+<th style="text-align: center;">CLMAGE</th>
+<th style="text-align: center;">LOSS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.8</td>
+<td style="text-align: center;">6.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5.6</td>
+<td style="text-align: center;">0.95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: center;">1.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5.4</td>
+<td style="text-align: center;">0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">6.95</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2.3</td>
+<td style="text-align: center;">0.15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="autocollision-automobile-uk-collision-claims-1"><code>AutoCollision</code>: Automobile UK Collision Claims</h3>
+<p>Contien la misma información que la base antes descrita con el mismo nombre a excepción de la columna <code>Age</code> en la que se muestra explícitamente los rangos de edad que conforman cada grupo (en la anterior se muestran solo los nivels <code>A</code>,<code>B</code>,…,<code>H</code>).</p>
+<ul>
+<li><code>A</code>: 17-20 años.</li>
+<li><code>B</code>: 21-24 años.</li>
+<li><code>C</code>: 25-29 años.</li>
+<li><code>D</code>: 30-34 años.</li>
+<li><code>E</code>: 35-39 años.</li>
+<li><code>F</code>: 40-49 años.</li>
+<li><code>G</code>: 50-59 años.</li>
+<li><code>H</code>: 60+ años.</li>
+</ul>
+<h3 id="autoclaims-automobile-insurance-claims-1"><code>AutoClaims</code>: Automobile Insurance Claims</h3>
+<p>Contiene los mismos datos que la base con el mismo nombre descrita anteriormente.</p>
+<h3 id="singaporeauto-singapore-automobile-claims-1"><code>SingaporeAuto</code>: Singapore Automobile Claims</h3>
+<p>Contiene los mismos datos que la base con el mismo nombre descrita anteriormente.</p>
+<h3 id="swedish-motor-insurance">Swedish Motor Insurance</h3>
+<p>Los datos fueron recabados por el <em>Swedish Committee on the Analysis of Risk Premium in Motor Insurance</em>. Contiene información sobre las reclamaciones en la cobertura de responsabilidad civil en seguro de automóviles correspondientes al año 1977. Tomando en cuenta las 5 categorías de distania recorrida por el vehículo, 7 zonas geográficas, 7 categorías de bonus y 9 tipos de vehículos, existen 2205 combinaciones, sin embargo, solo se consideraron 2182.</p>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><code>Kilometres</code>: Distancia conducida por el vehículo. Variable categórica con 5 niveles.</p></li>
+<li><p><code>Zone</code>: Zona geográfica del vehículo, agrupadas en 7 categorías.</p></li>
+<li><p><code>Bonu</code>: Basado en el registro previo de reclamaciones del conductor. Variable categórica con 7 niveles.</p></li>
+<li><p><code>Make</code>: Tipo del vehículo. Variable categórica con 9 niveles.</p></li>
+<li><p><code>Insured</code>: Exposición (fracción del año durante la cual estuvo vigente la póliza).</p></li>
+<li><p><code>Claims</code>: Número de reclamaciones.</p></li>
+<li><p><code>Payment</code>: Suma de los pagos de las reclamaciones.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Kilometres</th>
+<th style="text-align: center;">Zone</th>
+<th style="text-align: center;">Bonus</th>
+<th style="text-align: center;">Make</th>
+<th style="text-align: center;">Insured</th>
+<th style="text-align: center;">Claims</th>
+<th style="text-align: center;">Payment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">455.13</td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">392491</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">69.17</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">46221</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">72.88</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">15694</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1292.39</td>
+<td style="text-align: center;">124</td>
+<td style="text-align: center;">422201</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">191.01</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">119373</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">477.66</td>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">170913</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

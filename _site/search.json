@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "Sobre este sitio",
+      "description": "En este blog se encuentran publicados posts relacionados con diversos temas que se ven en el curso de Teoría del Riesgo en la carrera de Actuaría (Plan 2015) en la Facultad de Ciencias, UNAM.",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-05-08T15:03:36-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Teoría del Riesgo",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-05-08T15:03:40-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

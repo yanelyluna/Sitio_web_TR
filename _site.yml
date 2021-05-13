@@ -1,0 +1,18 @@
+name: "Teoria del Riesgo"
+title: "Teoria del Riesgo"
+description: |
+  Teoria del Riesgo
+output_dir: "_site"
+theme: larug.css
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - icon: fa fa-github
+      href: https://github.com/EduardoSelimMM/MaterialTeoriaRiesgo
+collections:
+  posts:
+    authors_metadata: false
+output: distill::distill_article
